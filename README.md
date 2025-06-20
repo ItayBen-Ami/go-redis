@@ -1,4 +1,8 @@
-# Go Redis Implementation
+# Go Redis
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4f1e4c02-68b6-4b3c-8b55-ad78c620523c" alt="Sample Image" style="width:50%; height:auto;">
+</p>
 
 A Redis server implementation in Go with zero external dependencies, based on the tutorial at [build-redis-from-scratch.dev](https://www.build-redis-from-scratch.dev/en/introduction). The original tutorial covers RESP serialization and basic Redis commands (SET, GET, HSET, HGET). This implementation extends that foundation with **concurrency support using goroutines** for multiple clients and a complete **PUB/SUB system** using Go channels and context for client state management.
 
@@ -123,9 +127,7 @@ All data structures are protected with appropriate mutexes:
 ├── handler.go      # Redis command implementations
 ├── resp.go         # RESP protocol parser
 ├── pubsub.go       # PUB/SUB system implementation
-├── aof.go          # Append-only file persistence
-├── go.mod          # Go module definition
-└── README.md       # This file
+└── aof.go          # Append-only file persistence
 ```
 
 ## Performance Considerations
